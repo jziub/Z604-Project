@@ -14,12 +14,14 @@ echo "###########################"
 echo "##  Starting MongoDB...  ##"
 echo "###########################"
 #mongod --dbpath $MONGODB_DBPATH --fork --logpath $MONGODB_LOGPATH
-mongod --dbpath $MONGODB_DBPATH > $MONGODB_LOGPATH/mongolog.log 2>&1
-echo "\n"
+mongod --dbpath $MONGODB_DBPATH > $MONGODB_LOGPATH/mongolog.log 2>&1 &
+echo ""
 
 echo "##########################"
 echo "##  Starting Hadoop...  ##"
 echo "##########################"
 hadoop namenode -format
-start-all.sh
-echo "\n"
+start-dfs.sh
+sleep 3
+start-mapred.sh
+echo ""
