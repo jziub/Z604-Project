@@ -58,8 +58,8 @@ echo ""
 echo "####################################"
 echo "##  Run temporal classification   ##"
 echo "####################################"
-python $HOME/text_processing/getFirstDateInText.py $TEXTS_DIR
-python $HOME/text_processing/importDate.py $WORK_DIR/$DATE_OUTPUT/part-00000 $TEXTS_DIR
+python $HOME/text_processing/getFirstDateInText.py $TEXTS_DIR >> $WORK_DIR/date1st_aa.txt
+python $HOME/text_processing/importDate.py $WORK_DIR/$DATE_OUTPUT/part-00000 $WORK_DIR/date1st_aa.txt
 python $HOME/text_processing/importTFDF.py $WORK_DIR/$TF_OUTPUT/part-00000
 python $HOME/text_processing/TLM.py
 
