@@ -32,16 +32,20 @@ hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.0-streaming.jar \
 	-file $HOME/text_processing/map_reduce/getDateInText/reducer.py \
 	-reducer $HOME/text_processing/map_reduce/getDateInText/reducer.py \
 	-input $TEXTS_DIR \
-	-output $DATE_OUTPUT \
+	-output $DATE_OUTPUT
+	
 hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.0-streaming.jar \
 	-file $HOME/text_processing/map_reduce/getTF/mapper.py \
 	-mapper $HOME/text_processing/map_reduce/getTF/mapper.py \
 	-file $HOME/text_processing/map_reduce/getTF/reducer.py \
 	-reducer $HOME/text_processing/map_reduce/getTF/reducer.py \
 	-input $TEXTS_DIR \
-	-output $TF_OUTPUT \
+	-output $TF_OUTPUT 
+	
 echo ""
 
+
+### Steps below assume the MR job only outputs one result file! ###
 
 echo "########################################"
 echo "##  Downloading results from HDFS...  ##"
@@ -54,9 +58,9 @@ echo ""
 echo "####################################"
 echo "##  Run temporal classification   ##"
 echo "####################################"
-#python $HOME/text_processing/getFirstDateInText.py $TEXTS_DIR
-#python $HOME/text_processing/getDateProb.py $WORK_DIR/$DATE_OUTPUT
-#python $HOME/text_processing/getTFDF.py $WORK_DIR/$TF_OUTPUT
-#python $HOME/text_processing/getTLM.py
+python $HOME/text_processing/getFirstDateInText.py $TEXTS_DIR
+python $HOME/text_processing/getDateProb.py $WORK_DIR/$DATE_OUTPUT
+python $HOME/text_processing/getTFDF.py $WORK_DIR/$TF_OUTPUT
+python $HOME/text_processing/getTLM.py
 
 echo ""

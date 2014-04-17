@@ -35,7 +35,7 @@ OAUTH2_CLIENT_ID = "aZOMwSm0wfb6ehZHD3ky04CR680a"
 OAUTH2_CLIENT_SECRET = "kvdwNKa2AqDpnWfrTOhJnNo9iEka"
 
 ''' Data API volume request parameters '''
-VOLUME_PARAMETERS = {}
+VOLUME_PARAMETERS = {'concat':'true'}
 # VOLUME_PARAMETERS = {'mets':'true'}
 # VOLUME_PARAMETERS = {'mets':'true', 'concat':'true'}
 BATCH_SIZE = 10

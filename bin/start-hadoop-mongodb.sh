@@ -5,7 +5,7 @@ MONGODB_LOGPATH=~/mongodb-log
 HADOOP_PATH=~/hadoop-data
 
 ### ALERT! PREVIOUS RESULTS ARE REMOVED! ###
-killall java; 
+stop-all.sh
 killall mongod;
 rm -fr $MONGODB_DBPATH; rm -fr $MONGODB_LOGPATH; rm -fr $HADOOP_PATH
 mkdir -p $MONGODB_DBPATH; mkdir -p $MONGODB_LOGPATH; mkdir -p $HADOOP_PATH
@@ -22,6 +22,6 @@ echo "##  Starting Hadoop...  ##"
 echo "##########################"
 hadoop namenode -format
 start-dfs.sh
-sleep 3
+sleep 10
 start-mapred.sh
 echo ""
