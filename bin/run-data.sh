@@ -59,8 +59,8 @@ echo "####################################"
 echo "##  Run temporal classification   ##"
 echo "####################################"
 python $HOME/text_processing/getFirstDateInText.py $TEXTS_DIR
-python $HOME/text_processing/getDateProb.py $WORK_DIR/$DATE_OUTPUT
-python $HOME/text_processing/getTFDF.py $WORK_DIR/$TF_OUTPUT
+python $HOME/text_processing/getDateProb.py $WORK_DIR/$DATE_OUTPUT/part-00000
+python $HOME/text_processing/getTFDF.py $WORK_DIR/$TF_OUTPUT/part-00000
 python $HOME/text_processing/getTLM.py
 
 echo ""
