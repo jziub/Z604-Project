@@ -1,8 +1,11 @@
 #!/bin/bash
 
-HOME=
-WORK_DIR=
-VOLUME_ID_FILE=
+# set env
+BIN=`dirname "$this"`
+BIN=`cd "$BIN"; pwd`
+HOME=`dirname "$this"`/..
+WORK_DIR=$HOME/working-dir
+VOLUME_ID_FILE=$HOME/idlist
 
 mkdir -p $WORK_DIR
 
