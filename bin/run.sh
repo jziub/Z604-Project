@@ -1,13 +1,15 @@
 #!/bin/bash
 
 # set env
-BIN=`dirname "$this"`
+BIN=`dirname "$0"`
 BIN=`cd "$BIN"; pwd`
-HOME=`dirname "$this"`/..
+HOME=`dirname "$BIN"`/..
 WORK_DIR=$HOME/working-dir
 VOLUME_ID_FILE=$HOME/idlist
+METADATA_DIR=$WORK_DIR/metadata
 
 mkdir -p $WORK_DIR
+mkdir -p $METADATA_DIR
 
 echo "###############################################"
 echo "##  Downloading texts from HTRC Data API...  ##"
