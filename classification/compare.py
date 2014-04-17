@@ -33,7 +33,7 @@ def run(clf):
 		raise TypeError("Argument should be an instance of Classifier class.")
 	model = clf(fetch_data())
 	print "Running %s..." % str(model)
-	model.repeat(100)
+	model.repeat(5)
 	return model.evaluate()
 
 def ttest(prf1, prf2):
