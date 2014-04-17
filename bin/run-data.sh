@@ -26,7 +26,7 @@ echo "Uploading texts to the local Hadoop cluster..."
 DATE_OUTPUT=date-output
 TF_OUTPUT=tf-output
 hadoop fs -put $TEXTS_DIR $TEXTS_DIR
-hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.0-streaming.jar \
+hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.2-streaming.jar \
 	-file $HOME/text_processing/map_reduce/getDateInText/mapper.py \
 	-mapper $HOME/text_processing/map_reduce/getDateInText/mapper.py \
 	-file $HOME/text_processing/map_reduce/getDateInText/reducer.py \
@@ -34,7 +34,7 @@ hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.0-streaming.jar \
 	-input $TEXTS_DIR \
 	-output $DATE_OUTPUT
 	
-hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.0-streaming.jar \
+hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.2-streaming.jar \
 	-file $HOME/text_processing/map_reduce/getTF/mapper.py \
 	-mapper $HOME/text_processing/map_reduce/getTF/mapper.py \
 	-file $HOME/text_processing/map_reduce/getTF/reducer.py \
