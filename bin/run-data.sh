@@ -25,14 +25,14 @@ echo "#########################################"
 DATE_OUTPUT=date-output
 TF_OUTPUT=tf-output
 hadoop fs -put $TEXTS_DIR $TEXTS_DIR
-hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.2-streaming.jar \
+hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.0-streaming.jar \
 	-file $HOME/text_processing/getDateInText/mapper.py \
 	-mapper $HOME/text_processing/getDateInText/mapper.py \
 	-file $HOME/text_processing/getDateInText/reducer.py \
 	-reducer $HOME/text_processing/getDateInText/reducer.py \
 	-input $TEXTS_DIR \
 	-output $DATE_OUTPUT \
-hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.2-streaming.jar \
+hadoop jar $HADOOP_HOME/contrib/streaming/hadoop-0.20.0-streaming.jar \
 	-file $HOME/text_processing/getTF/mapper.py \
 	-mapper $HOME/text_processing/getTF/mapper.py \
 	-file $HOME/text_processing/getTF/reducer.py \
