@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # set env
-BIN=`dirname "$0"`
-BIN=`cd "$BIN"; pwd`
-HOME=`dirname "$BIN"`/..
+HOME=`dirname "$0"`/..
 WORK_DIR=$HOME/working-dir
 VOLUME_ID_FILE=$HOME/idlist
 METADATA_DIR=$WORK_DIR/metadata
