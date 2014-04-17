@@ -61,10 +61,10 @@ def main():
     start = 0
     length = len(idRequest.volumeList)
     while (start < length):
-        print "Finish downloading ", start, " IDs."
         idlist = idRequest.volumeList[start : (start + BATCH_SIZE)]
         try:
             downloadZIP(generateURL(idlist), zipfilepath+'zip'+str(start)+'.zip')
+            print "Finish downloading ", len(idlist), " IDs."
         except IOError:
         	print generateURL(idlist)
         start = start + BATCH_SIZE
