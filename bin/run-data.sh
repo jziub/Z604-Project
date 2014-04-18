@@ -63,4 +63,6 @@ python $HOME/text_processing/importDate.py $WORK_DIR/$DATE_OUTPUT/part-00000 $WO
 python $HOME/text_processing/importTFDF.py $WORK_DIR/$TF_OUTPUT/part-00000
 python $HOME/text_processing/TLM.py
 
+python $HOME/classification/compare.py >> $WORK_DIR/final-result.txt
+
 echo ""
