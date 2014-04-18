@@ -1,13 +1,1 @@
-Z604-Project
-============
-
-### Note
-
-Please make sure to **exclude** any files other than code by putting them in `.gitignore`.
-
-### Team
-* Siyuan Guo @zachguo
-* Trevor Edelblute @tedelblu
-* Pallavi Murthy @PallaviMurthy
-* Bin Dai @bindai
-* Zhichao Huo @zhhuo
+This is a demo application based on https://github.com/zachguo/Z604-Project. There are necessary changes made to run it in HTRC context. 
